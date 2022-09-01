@@ -24,35 +24,27 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .tech-bits span {
+    color: $light-colour; 
+  }
+}
+
 .achievements-wrapper {
   strong {
     font-weight: 900;
   }
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
 
 @media (max-width: 800px) {
-    .tech-bits {
-      margin: 0 auto !important;
-      justify-content: center;
-    }
+  .body-wrapper {
+    margin-right: 0 !important;
+  }
+  .tech-bits {
+    margin: 0 auto !important;
+    justify-content: center;
+  }
 }
 
 @keyframes wobble {
