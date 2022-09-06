@@ -5,20 +5,6 @@
   width: 100vw;
 }
 
-@media (max-width: 800px) {
-  .main {
-    text-align: center !important;
-    .profile {
-      border-right-width: 0 !important;
-      width: 100% !important;
-      padding-right: 0 !important;
-      ul {
-        text-align: center !important;
-      }    
-    }
-  }
-}
-
 
 .main {
   display: flex;
@@ -27,6 +13,11 @@
   margin-top: 1rem;
   flex-flow: row wrap;
   width: 100%;
+  overflow: auto;
+
+  @media (max-width: $mobile-first-width) {
+    text-align: center;
+  }
 
 
   .segment p:first-child {
@@ -34,10 +25,15 @@
   }
   
   .profile {
+    @media (max-width: $mobile-first-width) {
+      width: 100%;
+      padding-right: 0; 
+    }
+
     width: 20vw;
-    min-width: 300px;
+    min-width: $minimum-width;
     padding-right: 4rem;
-    // flex: 1;
+    animation: slide-in 0.5s 1;
     
     h2 {
       text-align: center;
@@ -57,10 +53,17 @@
     .profile-summary-points {
         list-style: none;
         li {
-          text-indent: -1.7em;
+          $list-offset: -1.7rem;
+          text-indent: $list-offset;
+
+          @media (max-width: $mobile-first-width) {
+            margin-left: $list-offset;
+          }
+
           &:not(:last-child) {
             margin-bottom: 1rem;
           }
+
         }
         .location::before {
           content: "📍  ";
@@ -104,3 +107,15 @@
 }
 
 
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

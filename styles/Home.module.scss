@@ -3,6 +3,8 @@
 .body-wrapper {
   flex: 1;
   margin-right: 2rem;
+  animation: slide-in 0.8s 1;
+  min-width: $minimum-width;
 }
 
 .tech-bits {
@@ -37,7 +39,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: $mobile-first-width) {
   .body-wrapper {
     margin-right: 0 !important;
   }
@@ -59,5 +61,17 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

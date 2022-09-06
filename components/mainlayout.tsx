@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/components/MainLayout.module.scss'
@@ -10,6 +9,7 @@ export default function MainLayout({ children }: React.PropsWithChildren) {
       <Head>
         <title>Sam Watts</title>
         <meta name="description" content="Personal website for Sam Watts" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -28,7 +28,7 @@ export default function MainLayout({ children }: React.PropsWithChildren) {
 
           <ul className={styles['profile-summary-points']}>
             <li className={styles.location}>Brighton, UK</li>
-            <li className={styles.job}>Software Developer & Tech Lead at Lendscape</li>
+            <li className={styles.job}>Fullstack Software Developer & Tech Lead @ Lendscape</li>
             <li className={styles.degree}>Computer Science & Artificial Intelligence BSc (1st Class)</li>
           </ul>
 
@@ -36,7 +36,7 @@ export default function MainLayout({ children }: React.PropsWithChildren) {
         {children}
       </main>
       <footer className={styles.footer}>
-        I am powered by coffee, lots of it ☕
+        I am powered by coffee ☕
       </footer>
     </div>
   )
