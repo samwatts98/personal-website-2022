@@ -24,9 +24,11 @@ const Home: NextPage = () => {
         <span>Linux</span>
         <span>Bash/Shell</span>
         <span>Docker</span>
+        <span>Node.JS</span>
+        <span>Next.JS</span>
+        <span>Git</span>
         <span>Spring</span>
         <span>Gradle</span>
-        <span>Git</span>
         <span>Vaadin</span>
       </div>
       <h1>Recent Achievements 🏆</h1>

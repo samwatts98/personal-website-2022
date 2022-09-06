@@ -53,11 +53,10 @@
     .profile-summary-points {
         list-style: none;
         li {
-          $list-offset: -1.7rem;
-          text-indent: $list-offset;
+          text-indent: -1.7rem;
 
           @media (max-width: $mobile-first-width) {
-            margin-left: $list-offset;
+            margin-left: -1rem;
           }
 
           &:not(:last-child) {
@@ -104,6 +103,7 @@
   border-top: 1px solid $line-colour;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 
